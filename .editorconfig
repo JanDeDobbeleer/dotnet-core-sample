@@ -1,0 +1,27 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root=true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line=lf
+insert_final_newline=true
+# Resharper settings
+# Find all of these at https://www.jetbrains.com/help/resharper/EditorConfig_Index.html
+# A guide can be found at https://www.jetbrains.com/help/resharper/Using_EditorConfig.html
+# https://www.jetbrains.com/help/resharper/Reference__Code_Inspections_CSHARP.html
+# Does not yet work for InspectCode yet
+resharper_possible_null_reference_exception_highlighting=error
+resharper_redundant_using_directive_highlighting=error
+
+# Set default file settings
+[*.{cs, csproj, ps1}]
+charset=utf-8
+indent_style=space
+indent_size=4
+
+# appveryor.yml settings
+[{appveyor.yml}]
+indent_style=space
+indent_size=2

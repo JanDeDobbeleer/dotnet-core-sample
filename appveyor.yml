@@ -1,0 +1,7 @@
+image:
+- Visual Studio 2017
+environment:
+  coveralls_token:
+    secure: HMJLoYbkSD1p35JnHiBjv02frHKMvasoD9J6wLnzjSUsdPwFwiHU8t0SwcvyAYi1
+build_script:
+  - pwsh: .\build.ps1 -Target CI
