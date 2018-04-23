@@ -9,6 +9,7 @@
 
 # Cake files
 /tools
+!/tools/packages.config
 cheatsheet.md
 /Artifacts
 coverage.xml
