@@ -1,7 +1,8 @@
-#tool "nuget:?package=JetBrains.ReSharper.CommandLineTools"
-#addin Cake.Coveralls
-#tool coveralls.io
-#addin "Cake.Incubator"
+#tool "nuget:https://www.nuget.org/api/v2?package=JetBrains.ReSharper.CommandLineTools&version=2018.1.0"
+#tool "nuget:https://www.nuget.org/api/v2?package=coveralls.io&version=1.4.2"
+#addin "nuget:https://www.nuget.org/api/v2?package=Cake.Coveralls&version=0.8.0"
+#addin "nuget:https://www.nuget.org/api/v2?package=Cake.Incubator&version=2.0.1"
+
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
 ///////////////////////////////////////////////////////////////////////////////
