@@ -178,6 +178,11 @@ Task("CI")
     .IsDependentOn("Validate")
     .IsDependentOn("Upload-Coverage");
 
+Task("CI-UNIX")
+    .Description("Build the code, test and validate")
+    .IsDependentOn("Build")
+    .IsDependentOn("Test");
+
 ///////////////////////////////////////////////////////////////////////////////
 // TARGETS
 ///////////////////////////////////////////////////////////////////////////////
