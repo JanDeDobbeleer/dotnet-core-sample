@@ -1,7 +1,12 @@
 image:
 - Visual Studio 2017
+- Ubuntu
 environment:
   coveralls_token:
     secure: HMJLoYbkSD1p35JnHiBjv02frHKMvasoD9J6wLnzjSUsdPwFwiHU8t0SwcvyAYi1
 build_script:
-  - pwsh: .\build.ps1 -Target CI
+  - pwsh: |
+      if ($isWindows) {
+        .\build.ps1 -Target CI
+      }
+  - sh: ./build.sh --target=CI-UNIX
