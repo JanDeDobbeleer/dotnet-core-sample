@@ -1,2 +1,0 @@
-steps:
-  - powershell: .\build.ps1 -Target CI

@@ -1,0 +1,6 @@
+language: csharp
+mono: latest
+dotnet: 2.1.200
+os: osx
+script:
+  - ./build.sh --target=CI-UNIX
