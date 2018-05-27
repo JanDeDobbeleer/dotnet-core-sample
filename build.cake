@@ -17,7 +17,7 @@ var configuration = Argument<string>("configuration", "Release");
 var projects = GetFiles("./**/*.csproj");
 var projectPaths = projects.Select(project => project.GetDirectory().ToString());
 var artifactsDir = "./Artifacts";
-var coverageThreshold = 66;
+var coverageThreshold = 100;
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -110,6 +110,7 @@ Task("Test")
      {
          ArgumentCustomization = args => args.Append("/p:CollectCoverage=true")
                                              .Append("/p:CoverletOutputFormat=opencover")
+                                             .Append("/p:ThresholdType=line")
                                              .Append($"/p:Threshold={coverageThreshold}")
      };
     DotNetCoreTest("./Test/Test.csproj", settings);
